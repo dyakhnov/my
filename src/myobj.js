@@ -69,14 +69,14 @@ method.validateData = function() {
     return 'Empty Last Name';
   }
   var _annualSalary = parseInt(this.annualSalary, 10) || -1;
-  if (_annualSalary === 0) {
+  if (_annualSalary === -1) {
     return 'Incorrect Annual Salary, must be numeric';
   }
   var _superRate = parseInt(this.superRate, 10) || -1;
   if (_superRate === -1) {
-    return 'Incorrect Super Rate Salary, must be numeric';
+    return 'Incorrect Super Rate, must be numeric';
   } else if (_superRate < 0 || _superRate > 50) {
-    return 'Incorrect Super Rate Salary, must be within 0-50% range';
+    return 'Incorrect Super Rate, must be within 0-50% range';
   }
   return '';
 };
